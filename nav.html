@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 两端对齐的导航元素</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script>
+		var onav = undefined;
+		$(document).ready(function() {
+			onav = $(".nav-tabs li:first");
+			$(".nav-tabs li").click(function(){
+				if(onav!=undefined){
+					onav.removeClass("active");
+				}
+				$(this).addClass("active");
+				onav = $(this);
+			});
+		});
+	</script>
+	
+</head>
+<body>
+
+<p>两端对齐的导航元素</p>
+<ul class="nav nav-tabs nav-justified">
+	<li class="active"><a >Home</a></li>
+	<li><a >SVN</a></li>
+	<li><a >iOS</a></li>
+	<li><a >VB.Net</a></li>
+	<li><a >Java</a></li>
+	<li><a >PHP</a></li>
+</ul>
+	
+</body>
+</html>
