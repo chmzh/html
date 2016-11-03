@@ -8,6 +8,7 @@
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 	<script>
+		//第一种方法
 		var onav = undefined;
 		$(document).ready(function() {
 			onav = $(".nav-tabs li:first");
@@ -19,6 +20,18 @@
 				onav = $(this);
 			});
 		});
+		//第二种方法
+		/*
+		$(document).ready(function() {
+			
+			$(".nav-tabs li").click(function(){
+				$(".nav-tabs").children("li").each(function(){
+					$(this).removeClass("active");
+				});
+				$(this).addClass("active");
+			});
+		});
+		*/
 	</script>
 	
 </head>
