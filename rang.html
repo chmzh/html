@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>演示如何访问滑块控件</h3>
+
+<input type="range" id="myRange" oninput="change()" onchange="change()">
+
+<p>点击按钮来获得滑块控件的值。</p>
+
+<button onclick="myFunction()">试一下</button>
+
+<p id="demo"></p>
+
+<script>
+function change() {
+    var x = document.getElementById("myRange").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
