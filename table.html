@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script>
+function displayResult(){
+	var r = document.getElementById("myTable").rows;
+	for(var i=0;i<r.length;i++){
+		var c = r[i].cells;
+		for(var j=0;j<c.length;j++){
+			c[j].addEventListener("dblclick",function(){
+				var index = this.cellIndex;
+				for(var k=0;k<r.length;k++){
+					r[k].cells[index].style.color='#0022AA';
+				}
+				
+				this.preventDefault();});
+		}
+	}
+	
+}
+</script>
+</head>
+<body>
+
+<table id="myTable" border="1">
+	<tr>
+		<td>cell 1</td>
+		<td>cell 2</td>
+	</tr>
+	<tr>
+		<td>cell 3</td>
+		<td>cell 4</td>
+	</tr>
+</table>
+<br>
+<button type="button" onclick="displayResult()">显示第一行单元格的数量</button>
+
+</body>
+</html>
